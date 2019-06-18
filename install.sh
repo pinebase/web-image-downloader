@@ -2,7 +2,8 @@
 
 
 # set program name
-program_name="web-image-downloader"
+program_name="image-downloader"
+program_executable="imgdl"
 
 
 # get current version
@@ -11,16 +12,19 @@ version=$(cat ./version)
 
 # load installation header
 header="
-           _     _ 
-          (_)   | |
- __      ___  __| |
- \ \ /\ / / |/ _  |
-  \ V  V /| | (_| |
-   \_/\_/ |_|\__ _|
+  _                     _ _ 
+ (_)                   | | |
+  _ _ __ ___   __ _  __| | |
+ | |  _   _ \ / _  |/ _  | |
+ | | | | | | | (_| | (_| | |
+ |_|_| |_| |_|\__  |\__ _|_|
+               __/ |        
+              |___/         
+
 "
 echo "$header"
 echo ""
-echo "Web Image Downloader"
+echo "Image Downloader"
 echo "version $version"
 echo "https://github.com/pinebase/$program_name"
 echo ""
@@ -68,28 +72,28 @@ echo "# copied files to: /usr/lib/$program_name/v$version/"
 
 
 # update permissions for executables
-chmod 755 /usr/lib/$program_name/v$version/wid*.sh
-echo "# updated permissions: 755 /usr/lib/$program_name/v$version/wid*.sh"
+chmod 755 /usr/lib/$program_name/v$version/$program_executable*.sh
+echo "# updated permissions: 755 /usr/lib/$program_name/v$version/$program_executable*.sh"
 
 
-if [ -f ./manual/wid.1 ]
+if [ -f ./manual/$program_executable.1 ]
 then
 	if [ -d /usr/local/share/man/man1/ ]
 	then
 		# copy manual file
-		cp ./manual/wid.1 /usr/local/share/man/man1/
+		cp ./manual/$program_executable.1 /usr/local/share/man/man1/
 
 		# refresh system man pages
 		mandb -q
-		echo "# man page updated for wid"
+		echo "# man page updated for $program_executable"
 	fi
 fi
 
 
 # create soft links in /usr/bin
-unlink /usr/bin/wid 2>/dev/nul
-ln -s /usr/lib/$program_name/v$version/wid.sh /usr/bin/wid
-echo "# soft link created: /usr/bin/wid"
+unlink /usr/bin/$program_executable 2>/dev/nul
+ln -s /usr/lib/$program_name/v$version/$program_executable.sh /usr/bin/$program_executable
+echo "# soft link created: /usr/bin/$program_executable"
 
 
 echo "# installation complete"

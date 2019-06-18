@@ -2,7 +2,7 @@
 
 
 # set program variables
-program_name="web-image-downloader"
+program_name="image-downloader"
 version=$(cat /var/lib/$program_name/current_version)
 
 
@@ -11,7 +11,7 @@ function display_options(){
 
 	options_text="
 
-		Web Image Downloader - options
+		Image Downloader - options
 
 		version $version
 

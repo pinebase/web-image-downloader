@@ -1,26 +1,26 @@
 
-
-           _     _ 
-          (_)   | |
- __      ___  __| |
- \ \ /\ / / |/ _  |
-  \ V  V /| | (_| |
-   \_/\_/ |_|\__ _|
-
-
-
-
-Web Image Downloader
+  _                     _ _ 
+ (_)                   | | |
+  _ _ __ ___   __ _  __| | |
+ | | '_ ` _ \ / _` |/ _` | |
+ | | | | | | | (_| | (_| | |
+ |_|_| |_| |_|\__, |\__,_|_|
+               __/ |        
+              |___/         
 
 
 
-https://github.com/pinebase/web-image-downloader
+Image Downloader
+
+
+
+https://github.com/pinebase/image-downloader
 
 # Author: Scott Forsberg
 # Contact: contact.scottforsberg@gmail.com
 
 # Release Date: 2019-06-08
-# Version: .3
+# Version: .4
 
 
 
@@ -51,7 +51,7 @@ Installation
 
 	Download and unzip the program files, then change working directory to them:
 	
-		# cd web-image-downloader
+		# cd image-downloader
 
 
 	Next, run the installation script:
@@ -62,13 +62,13 @@ Installation
 	This will install the following files and folders:
 
 		write protected library files, version specific
-			/usr/lib/web-image-downloader/v$version	
+			/usr/lib/image-downloader/v$version	
 
 		storage for lists of generated words
-			/var/lib/web-image-downloader
+			/var/lib/image-downloader
 
 		man page for wg				
-			/usr/local/share/man/man1/wid.1		
+			/usr/local/share/man/man1/imgdl.1		
 
 
 
